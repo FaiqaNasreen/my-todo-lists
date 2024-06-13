@@ -1,0 +1,266 @@
+.main-header {
+  background-color: #ffffff;
+  padding: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+  color: #333333;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+
+}
+
+.logo a em {
+  color: #ff6b6b;
+}
+
+.menu-link {
+  display: none;
+  margin-left: 800px;
+
+}
+
+.main-nav {
+  display: block;
+
+}
+
+.main-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+
+}
+
+.main-menu li {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.main-menu li a {
+  color: #860d0d;
+  text-decoration: none;
+  text-size-adjust: 20px;
+}
+
+.main-menu .external {
+  color: #ff6b6b;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+
+.sub-menu li {
+  display: block;
+}
+
+.has-submenu:hover .sub-menu {
+  display: block;
+}
+
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .menu-link {
+    display: block;
+    margin-left: 0;
+  }
+
+  .main-menu {
+    display: none;
+    margin-left: 0;
+  }
+
+  .main-menu li {
+    display: block;
+    padding: 10px;
+  }
+
+  .sub-menu {
+    position: static;
+    box-shadow: none;
+  }
+
+  .has-submenu:hover .sub-menu {
+    display: none;
+  }
+}
+/* end header css */
+
+
+/* ToDoList*/
+/* Common styles for all screen sizes */
+
+body {
+  background-color: #1f1e1e;
+  color: white;
+  padding: auto;
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.todo-wrapper {
+  background: #353434;
+  padding: 2%;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  overflow-y: auto;
+  box-shadow: 0px 5px 7px rgb(27, 27, 27);
+}
+
+.todo-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgb(78, 78, 78);
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.todo-input-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 25px;
+}
+
+.todo-input-item label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.todo-input-item input {
+  padding: 8px;
+  border: none;
+  width: 250px;
+}
+
+.todo-input-item input:focus {
+  outline: 2px solid rgb(0, 230, 122);
+}
+
+.primaryBtn,
+.secondaryBtn {
+  color: white;
+  border: none;
+  border-radius: 0px;
+  margin-top: 25px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.primaryBtn {
+  background-color: rgb(11, 102, 60);
+  width: 60px;
+}
+
+.primaryBtn:hover {
+  background-color: rgb(4, 196, 106);
+}
+
+.secondaryBtn {
+  background-color: rgb(71, 71, 71);
+  width: fit-content;
+}
+
+.active {
+  background-color: rgb(0, 230, 122);
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-area {
+  margin-bottom: 15px;
+}
+
+.todo-list-item {
+  background-color: #414040;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 3px 5px rgb(43, 42, 42);
+}
+
+.todo-list-item h3 {
+  font-size: 25px;
+  color: rgb(0, 230, 122);
+  font-weight: bold;
+  margin: 0;
+}
+
+.todo-list-item p {
+  font-size: 14px;
+  color: rgb(161, 161, 161);
+  margin-top: 8px;
+}
+
+.icon,
+.check-icon {
+  font-size: 25px;
+  cursor: pointer;
+  color: rgb(0, 230, 122);
+}
+
+.icon:hover,
+.check-icon:hover {
+  color: rgb(66, 4, 4);
+}
+
+/* edit_wrapper css */
+.edit__wrapper {
+  background-color: #414040;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.edit__wrapper,
+.edit__wrapper input {
+  border: 1px solid lightgray;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+.edit__wrapper .primaryBtn {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  font-size: 16px;
+  width: fit-content;
+}
+
+/* Responsive styles for screens up to 768px width */
+@media (max-width: 768px) {
+  .todo-wrapper {
+    margin-left: 80px;
+  }
+
+  .todo-input-item input {
+    width: 100%;
+    /* Adjust input width to fit smaller screens */
+  }
+}
